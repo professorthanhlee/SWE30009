@@ -5,7 +5,6 @@ import random
 from unittest.mock import patch
 from converter import main, celsius_to_fahrenheit, fahrenheit_to_celsius, celsius_to_kelvin, kelvin_to_celsius, fahrenheit_to_kelvin, kelvin_to_fahrenheit
 import unittest
-# Define a small tolerance for floating-point comparisons
 
 
 class TestSymmetryRelation(unittest.TestCase):
