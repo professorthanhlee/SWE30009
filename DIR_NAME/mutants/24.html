@@ -21,7 +21,7 @@
     SyntaxHighlighter.all();
     window.setTimeout(function () {
         
-        $('.line.number73').attr('title', 'ROR');
+        $('.line.number33').attr('title', 'AOR');
         
     }, 0);
 </script>
@@ -52,18 +52,18 @@
   File "c:\users\user\appdata\local\programs\python\python38\lib\unittest\mock.py", line 907, in assert_called_with
     raise AssertionError(_error_message()) from cause
 AssertionError: expected call not found.
-Expected: print('-300.96 Kelvin is equal to -1001.40 degrees Fahrenheit.')
-Actual: print('Invalid choice. Please select a valid option (1/2/3/4/5/6).')
+Expected: print('-306.63 Kelvin is equal to -1011.60 degrees Fahrenheit.')
+Actual: print('-306.63 Kelvin is equal to 19.00 degrees Fahrenheit.')
 </pre>
 
 <h3>Mutations</h3>
 <ul>
     
-    <li>ROR - line 73</li>
+    <li>AOR - line 33</li>
     
 </ul>
 <h3>Mutant</h3>
-<pre class="brush: python; first-line: 6; highlight: [73]; toolbar: false;">
+<pre class="brush: python; first-line: 6; highlight: [33]; toolbar: false;">
 
 
 
@@ -95,7 +95,7 @@ def fahrenheit_to_kelvin(fahrenheit):
 
 def kelvin_to_fahrenheit(kelvin):
     '''Convert Kelvin to Fahrenheit.'''
-    return (((kelvin - 273.15) * 9) / 5) + 32
+    return (((kelvin - 273.15) // 9) / 5) + 32
 
 
 def main():
@@ -135,7 +135,7 @@ def main():
             input('Enter the temperature in Fahrenheit: '))
         kelvin_temperature = fahrenheit_to_kelvin(fahrenheit_temperature)
         print(f'{fahrenheit_temperature} degrees Fahrenheit is equal to {kelvin_temperature} Kelvin.')
-    elif choice != 6:
+    elif choice == 6:
         kelvin_temperature = float(
             input('Enter the temperature in Fahrenheit: '))
         fahrenheit_temperature = kelvin_to_fahrenheit(kelvin_temperature)

@@ -21,7 +21,7 @@
     SyntaxHighlighter.all();
     window.setTimeout(function () {
         
-        $('.line.number47').attr('title', 'ROR');
+        $('.line.number28').attr('title', 'AOR');
         
     }, 0);
 </script>
@@ -36,34 +36,34 @@
 <h3>Details</h3>
 <ul>
     <li>module - <code><module 'converter' from '.\\converter.py'></code></li>
-    <li><span class="label label-success">killed</span> by <code>test_composition_relation1 (test_converter.TestSymmetryRelation)</code></li>
+    <li><span class="label label-success">killed</span> by <code>test_composition_relation2 (test_converter.TestSymmetryRelation)</code></li>
     
     <li>duration - 0.002 s</li>
     
     
-    <li>tests run - 1</li>
+    <li>tests run - 2</li>
     
 </ul>
 
 <h3>Exception traceback</h3>
 <pre>Traceback (most recent call last):
-  File ".\test_converter.py", line 58, in test_composition_relation1
+  File ".\test_converter.py", line 71, in test_composition_relation2
     mock_print.assert_called_with(
   File "c:\users\user\appdata\local\programs\python\python38\lib\unittest\mock.py", line 907, in assert_called_with
     raise AssertionError(_error_message()) from cause
 AssertionError: expected call not found.
-Expected: print('-402.75 Kelvin is equal to -1184.62 degrees Fahrenheit.')
-Actual: print('-402.75 degrees Celsius is equal to -692.95 degrees Fahrenheit.')
+Expected: print('-1614.05 degrees Fahrenheit is equal to -641.32 Kelvin.')
+Actual: print('-1614.05 degrees Fahrenheit is equal to -73799.13 Kelvin.')
 </pre>
 
 <h3>Mutations</h3>
 <ul>
     
-    <li>ROR - line 47</li>
+    <li>AOR - line 28</li>
     
 </ul>
 <h3>Mutant</h3>
-<pre class="brush: python; first-line: 6; highlight: [47]; toolbar: false;">
+<pre class="brush: python; first-line: 6; highlight: [28]; toolbar: false;">
 
 
 
@@ -90,7 +90,7 @@ def kelvin_to_celsius(kelvin):
 
 def fahrenheit_to_kelvin(fahrenheit):
     '''Convert Fahrenheit to Kelvin.'''
-    return (((fahrenheit - 32) * 5) / 9) + 273.15
+    return (((fahrenheit - 32) * 5) * 9) + 273.15
 
 
 def kelvin_to_fahrenheit(kelvin):
@@ -109,7 +109,7 @@ def main():
     
     choice = int(input('Enter your choice (1/2/3/4/5/6): '))
     
-    if choice != 1:
+    if choice == 1:
         celsius_temperature = float(
             input('Enter the temperature in Celsius: '))
         fahrenheit_temperature = celsius_to_fahrenheit(celsius_temperature)

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MutPy mutation report - mutation #8</title>
+    <title>MutPy mutation report - mutation #28</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     
@@ -21,7 +21,7 @@
     SyntaxHighlighter.all();
     window.setTimeout(function () {
         
-        $('.line.number13').attr('title', 'AOR');
+        $('.line.number33').attr('title', 'AOR');
         
     }, 0);
 </script>
@@ -31,39 +31,39 @@
     <div class="container">
         
 <div class="page-header">
-    <h1>Mutation #8</h1>
+    <h1>Mutation #28</h1>
 </div>
 <h3>Details</h3>
 <ul>
     <li>module - <code><module 'converter' from '.\\converter.py'></code></li>
-    <li><span class="label label-success">killed</span> by <code>test_composition_relation3 (test_converter.TestSymmetryRelation)</code></li>
+    <li><span class="label label-success">killed</span> by <code>test_composition_relation1 (test_converter.TestSymmetryRelation)</code></li>
     
-    <li>duration - 0.003 s</li>
+    <li>duration - 0.002 s</li>
     
     
-    <li>tests run - 3</li>
+    <li>tests run - 1</li>
     
 </ul>
 
 <h3>Exception traceback</h3>
 <pre>Traceback (most recent call last):
-  File ".\test_converter.py", line 84, in test_composition_relation3
+  File ".\test_converter.py", line 58, in test_composition_relation1
     mock_print.assert_called_with(
   File "c:\users\user\appdata\local\programs\python\python38\lib\unittest\mock.py", line 907, in assert_called_with
     raise AssertionError(_error_message()) from cause
 AssertionError: expected call not found.
-Expected: print('20.74 degrees Celsius is equal to 791.73 Kelvin.')
-Actual: print('20.74 degrees Celsius is equal to 293.89 Kelvin.')
+Expected: print('-291.02 Kelvin is equal to -983.51 degrees Fahrenheit.')
+Actual: print('-291.02 Kelvin is equal to -1047.51 degrees Fahrenheit.')
 </pre>
 
 <h3>Mutations</h3>
 <ul>
     
-    <li>AOR - line 13</li>
+    <li>AOR - line 33</li>
     
 </ul>
 <h3>Mutant</h3>
-<pre class="brush: python; first-line: 6; highlight: [13]; toolbar: false;">
+<pre class="brush: python; first-line: 6; highlight: [33]; toolbar: false;">
 
 
 
@@ -75,7 +75,7 @@ def celsius_to_fahrenheit(celsius):
 
 def fahrenheit_to_celsius(fahrenheit):
     '''Convert Fahrenheit to Celsius.'''
-    return ((fahrenheit - 32) / 5) / 9
+    return ((fahrenheit - 32) * 5) / 9
 
 
 def celsius_to_kelvin(celsius):
@@ -95,7 +95,7 @@ def fahrenheit_to_kelvin(fahrenheit):
 
 def kelvin_to_fahrenheit(kelvin):
     '''Convert Kelvin to Fahrenheit.'''
-    return (((kelvin - 273.15) * 9) / 5) + 32
+    return (((kelvin - 273.15) * 9) / 5) - 32
 
 
 def main():

@@ -21,7 +21,7 @@
     SyntaxHighlighter.all();
     window.setTimeout(function () {
         
-        $('.line.number63').attr('title', 'ROR');
+        $('.line.number33').attr('title', 'AOR');
         
     }, 0);
 </script>
@@ -38,7 +38,7 @@
     <li>module - <code><module 'converter' from '.\\converter.py'></code></li>
     <li><span class="label label-success">killed</span> by <code>test_composition_relation1 (test_converter.TestSymmetryRelation)</code></li>
     
-    <li>duration - 0.001 s</li>
+    <li>duration - 0.002 s</li>
     
     
     <li>tests run - 1</li>
@@ -52,18 +52,18 @@
   File "c:\users\user\appdata\local\programs\python\python38\lib\unittest\mock.py", line 907, in assert_called_with
     raise AssertionError(_error_message()) from cause
 AssertionError: expected call not found.
-Expected: print('-405.70 Kelvin is equal to -1189.92 degrees Fahrenheit.')
-Actual: print('-405.70 Kelvin is equal to -678.85 degrees Celsius.')
+Expected: print('-134.95 Kelvin is equal to -702.57 degrees Fahrenheit.')
+Actual: print('-134.95 Kelvin is equal to 22.93 degrees Fahrenheit.')
 </pre>
 
 <h3>Mutations</h3>
 <ul>
     
-    <li>ROR - line 63</li>
+    <li>AOR - line 33</li>
     
 </ul>
 <h3>Mutant</h3>
-<pre class="brush: python; first-line: 6; highlight: [63]; toolbar: false;">
+<pre class="brush: python; first-line: 6; highlight: [33]; toolbar: false;">
 
 
 
@@ -95,7 +95,7 @@ def fahrenheit_to_kelvin(fahrenheit):
 
 def kelvin_to_fahrenheit(kelvin):
     '''Convert Kelvin to Fahrenheit.'''
-    return (((kelvin - 273.15) * 9) / 5) + 32
+    return (((kelvin - 273.15) / 9) / 5) + 32
 
 
 def main():
@@ -125,7 +125,7 @@ def main():
         kelvin_temperature = celsius_to_kelvin(celsius_temperature)
         print(
             f'{celsius_temperature} degrees Celsius is equal to {kelvin_temperature} Kelvin.')
-    elif choice != 4:
+    elif choice == 4:
         kelvin_temperature = float(input('Enter the temperature in Kelvin: '))
         celsius_temperature = kelvin_to_celsius(kelvin_temperature)
         print(
